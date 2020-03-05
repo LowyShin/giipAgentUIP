@@ -1,6 +1,3 @@
-<job id="giipFileConverter ver 1.00">
-<script language="VBScript" src="../giipAgent.cfg"></script>
-<script language="VBScript">
 ' -------------------------------------------------------------
 ' Authorized by Lowy at 20200302
 ' -------------------------------------------------------------
@@ -9,6 +6,14 @@
 'On Error Resume Next
 scrver = "1.00"
 ' User Variables 
+
+dim objfs:set objfs = createobject("scripting.filesystemobject"):sub include(p):executeglobal objfs.OpenTextfile(p).readall:end sub
+dim strScriptPath
+
+strScriptPath = objfs.GetParentFolderName(WScript.ScriptFullName)
+strPathParent = mid(strScriptPath, 1, instrRev(strScriptPath, "\"))
+
+include(objFs.BuildPath(strPathParent, "giipAgent.cfg"))
 
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
@@ -39,7 +44,7 @@ lwURLKVS = replace(lwURLKVS, "{{lssn}}", lsSn)
 
 Set lwFso = CreateObject("Scripting.FileSystemObject")
 
-jGiipCnf = "{""sk"":""" & sk & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """}"
+jGiipCnf = "{""sk"":""" & at & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """}"
 
 lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
 
@@ -187,7 +192,4 @@ Function SetDtToStr(dt, date_type)
       SetDtToStr = mydate
 
 End Function
-
-</script>
-</job>
 
