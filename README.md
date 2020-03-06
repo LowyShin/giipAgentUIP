@@ -2,8 +2,16 @@
 
 ## Introduce
 
+If you want remote control your PC or Windows servers by UiPath, try it!
+
+You can execute custom xaml file by mobile phone, and managing xaml files or wsf(Windows Script), vbs, ps1(Power shell), bat, py, rb, etc.
+
+If you using giipAgentLinux, you can handling linux also!
+
 This is giipAgent made by UiPath xaml file.
+
 It needs to make a acount to giip service and git clone giipAgentWin as below
+
 
 ```sh
 git clone https://github.com/LowyShin/giipAgentWin.git
