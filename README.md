@@ -96,3 +96,10 @@ https://github.com/LowyShin/giip/wiki/Contact-Us
 
 * giip
   * https://github.com/LowyShin/giip/wiki
+* giipAgent for Windows
+  * https://github.com/LowyShin/giipAgentWin
+* giipAgent for Linux
+  * https://github.com/LowyShin/giipAgentLinux
+* giipAgent for UiPath
+  * https://github.com/LowyShin/giipAgentUIP
+
