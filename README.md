@@ -107,3 +107,5 @@ https://github.com/LowyShin/giip/wiki/Contact-Us
 * giipAgent for UiPath
   * https://github.com/LowyShin/giipAgentUIP
 
+* UiPath Personal Knowledgebase
+  * https://github.com/LowyShin/lwrpa-uip-study-ja/wiki
