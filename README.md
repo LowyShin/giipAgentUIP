@@ -63,3 +63,8 @@ You may change source you want.
 If you want any question, mail to me. 
 
 https://github.com/LowyShin/giip/wiki/Contact-Us
+
+## Links
+
+* giip
+  * https://github.com/LowyShin/giip/wiki
