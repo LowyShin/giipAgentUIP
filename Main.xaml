@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1401,4046" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="rp_exectype" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1401,4293</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -52,7 +60,7 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1381,3986" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1381,4233" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sHttpRst" />
       <Variable x:TypeArguments="njl:JObject" Name="joHttpRst" />
@@ -193,9 +201,9 @@
         </Sequence>
       </If.Then>
     </If>
-    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1339,1287" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1339,1434" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
-        <If Condition="[left( LTrim(sHttpRst), 1) = &quot;[&quot; or left( LTrim(sHttpRst), 1) = &quot;{&quot;]" sap:VirtualizedContainerService.HintSize="960,1139" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[left( LTrim(sHttpRst), 1) = &quot;[&quot; or left( LTrim(sHttpRst), 1) = &quot;{&quot;]" sap:VirtualizedContainerService.HintSize="960,1286" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
             <Sequence sap:VirtualizedContainerService.HintSize="376,713" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <Sequence.Variables>
@@ -231,7 +239,7 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence sap:VirtualizedContainerService.HintSize="539,991" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence sap:VirtualizedContainerService.HintSize="539,1138" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="giipCmd" />
               </Sequence.Variables>
@@ -285,6 +293,11 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WriteTextFile>
               <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="giipTmpScript.bat" sap:VirtualizedContainerService.HintSize="497,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+              <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathWork + &quot;\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="497,107" sap2010:WorkflowViewState.IdRef="InvokeVBScript_2" WaitForOutput="True">
+                <ui:InvokeVBScript.Arguments>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:InvokeVBScript.Arguments>
+              </ui:InvokeVBScript>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] Executed ...&quot; + sFileExt]" />
             </Sequence>
           </If.Else>
@@ -313,6 +326,14 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">[lwURLKVS + sRstExec]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="1339,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[rp_exectype]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[sFileExt]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[lwURLKVS]" sap:VirtualizedContainerService.HintSize="1339,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[sHttpRst]" StatusCode="[nHttpCode]" TimeoutMS="6000">

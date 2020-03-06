@@ -1,1 +1,0 @@
-Start-Process D:\lwWork\Projects\giipAgentUIP\giipTmpScript.bat

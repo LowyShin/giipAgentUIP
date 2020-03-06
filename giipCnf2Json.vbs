@@ -47,66 +47,7 @@ Set lwFso = CreateObject("Scripting.FileSystemObject")
 jGiipCnf = "{""sk"":""" & at & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """}"
 
 lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
-
-Sub ExecQue(lwPath, lwText)
-	Dim lwFso, sAbsFileName, DT, sDT
-	lwTmpFileName = "tmpScript." & lwScrType
-	sAbsFileName = lwPath & "\" & lwTmpFileName
-	lwTextSetLog = lwTmpFileName
-	lwBatTmp = lwPath & "\lwTmpScriptExec.bat"
-
-	Set lwFso = WScript.CreateObject("Scripting.FileSystemObject")
-
-	if lwFso.fileexists(sAbsFileName) then
-		lwFso.DeleteFile(sAbsFileName)
-	end if
-	if lwFso.fileexists(lwBatTmp) then
-		lwFso.DeleteFile(lwBatTmp)
-	end if
-	' save Temp File
-	lwLogFileWrite lwPath, lwTmpFileName, lwText
-	lwLogFileWrite lwPath, "lwTmpScriptExec.bat", lwTextSetLog
-
-	Select Case lwScrType
-	Case "wsf"
-		' runcmd = "cmd.exe /c start /min " & lwTmpFileName & " ^& exit"
-		runcmd = "wscript //B //Nologo " & lwTmpFileName
-		Set lwWSSRst = lwWsShell.Exec(runcmd)
-		' Call lwWsShell.run(runcmd)
-	Case "ps1"
-		' replace powershell permission
-		runcmd = "powershell.exe -Command ""Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force"""
-		Set lwWSSRst = lwWsShell.Exec(runcmd)
-		'Call lwWsShell.run(runcmd)
-
-		runcmd = "powershell.exe """ & lwPath & "\" & lwTmpFileName & """"
-		Set lwWSSRst = lwWsShell.Exec(runcmd)
-		' Call lwWsShell.run(runcmd)
-	Case else
-		Set lwWSSRst = lwWsShell.Exec(runcmd)
-		' Call lwWsShell.run(lwTmpFileName)
-	End Select
-
-	WScript.Sleep 10000
-
-	Set wmi = GetObject("winmgmts://./root/cimv2")
-
-	qry = "SELECT * FROM Win32_Process WHERE Name='wscript.exe' AND NOT " & _
-      		"CommandLine LIKE '%" & Replace(WScript.ScriptFullName, "\", "\\") & "%'"
-
-	For Each p In wmi.ExecQuery(qry)
-	  p.Terminate
-	Next
-
-	if lwFso.fileexists(lwBatTmp) then
-		lwFso.DeleteFile(lwBatTmp)
-	end if
-	if lwFso.fileexists(sAbsFileName) then
-	'	lwFso.DeleteFile(sAbsFileName)
-	end if
-
-      Set lwFso = Nothing
-End Sub
+lwDelTmp lwPath
 
 Sub lwLogFileWrite(sPath, sFileName, sContent)
       Set lwFso = CreateObject("Scripting.FileSystemObject")
@@ -163,6 +104,24 @@ Function lwGetHTTP(url, meth, fv, charset, output)
 		lwGetHTTP = txtData
 	end if
 End Function
+
+Sub lwDelTmp(sPath)
+	Dim lwFso, lwFolder, lwFile
+	Set lwFso = WScript.CreateObject("Scripting.FileSystemObject")
+	Set lwFolder = lwFso.GetFolder(sPath)
+	Set lwFiles = lwFolder.Files
+	For Each File In lwFiles
+		ModDate = File.DateLastModified
+		lwFileName = File.Name
+		if instr(lwFileName, "giipTmp") > 0 then
+			lwFso.DeleteFile(sPath & "\" & File.Name)
+		end if
+	Next
+
+	Set lwFile = Nothing
+	Set lwFolder = Nothing
+	Set lwFso = Nothing
+End Sub
 
 Function SetDtToStr(dt, date_type)
 
