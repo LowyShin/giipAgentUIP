@@ -84,6 +84,10 @@ Well done!!
 
 If you have many xaml files, you can deploy you want any PCs you have!!
 
+## Known bugs
+
+* Exception handling is not set yet.
+
 ## We want contributors
 
 You may change source you want.

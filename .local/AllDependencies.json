@@ -2423,15 +2423,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cfk428\\.nuget\\packages\\": {}
+    "C:\\Users\\shin_hyunchul\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "giipAgentUIP",
       "projectName": "giipAgentUIP",
-      "projectPath": "C:\\lwwork\\Projects\\giipAgentUIP\\.local",
-      "packagesPath": "C:\\Users\\cfk428\\.nuget\\packages\\",
-      "outputPath": "C:\\lwwork\\Projects\\giipAgentUIP\\.local"
+      "projectPath": "D:\\lwWork\\Projects\\giipAgentUIP\\.local",
+      "packagesPath": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\",
+      "outputPath": "D:\\lwWork\\Projects\\giipAgentUIP\\.local"
     },
     "frameworks": {
       "net461": {
