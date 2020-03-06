@@ -58,7 +58,31 @@ If you just running simple, use MainSM.xaml
 
 ## Execute Custom Xaml file on giipAgentUIP
 
+* Add script on giip Script Repository
+  * Left Menu > Automation > Script Repository
+  * Click [Add Script](https://giipaspstg02.azurewebsites.net/view/SMAHTML/ScrPut.asp) button.
+  * Put Script Name you want
+  * Select Script Type to `json`
+  * Write JSON data
+  ```json
+  {
+  "Execxaml" : "LowyAI\\MainOTM.xaml"
+  }
+  ```
+  * Save and exit
+* Set to your PC this script
+  * Browse detail page of this script
+  * Click to check your server on `Add Queue` Section
+  * Set interval (Minute)
+  * If you want onetime, `No` to Repeat
+  * If you want just add, `No` to Activate
+  * Click [Apply Queue] Button
+    * If already added on checked server, skipped this action.
+    * If you want modify, delete and add this action.
 
+Well done!!
+
+If you have many xaml files, you can deploy you want any PCs you have!!
 
 ## We want contributors
 
