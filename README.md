@@ -47,14 +47,16 @@ git clone https://github.com/LowyShin/giipAgentWin.git
 
 Well done! Ready to execute giipAgentUIP
 
-Launch UiPath Application.
+## Launch UiPath Application
 
-Execute Main.xaml
+Execute Main.xaml on UiPath Studio.
 
 If you doesn't any error, you may execute MainSM.xaml for loop work.
 
 You may registrate to Windows scheduler by batch every 1 min. If you want, use Main.xaml
 If you just running simple, use MainSM.xaml
+
+## We want contributors
 
 You may change source you want.
 
