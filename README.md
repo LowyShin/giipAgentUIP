@@ -94,7 +94,8 @@ If you have many xaml files, you can deploy you want any PCs you have!!
 
 ## Known bugs
 
-* Exception handling is not set yet.
+* Broken character with Japanese on wsf file.
+  * UiPath forced UTF-8, whenever save to ANSI or UTF-8 the japanese code, it all broken. 
 
 ## We want contributors
 
@@ -124,5 +125,9 @@ https://github.com/LowyShin/giip/wiki/Contact-Us
 ## Update History
 
 * 20200309 Lowy
+  * Simple excetion.
+    * Just notify to Log message, and continue.
+  * Minimize cmd window when execution.
+    * Launch `CMD.exe` Process and add Params `"/c start /min giipExec.bat ^& exit"`
   * Integrate to giipAgentUIP. No more download giipAgentWin
   * Add interval variables. You may change execute interval at giipAgent.cfg

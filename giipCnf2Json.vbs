@@ -56,8 +56,6 @@ if lwFso.FileExists(strPathParent & "\giipAgent.cfg") then
 		"	,""hn"":""" & hostname & """" & vbCRLF & _
 		"	,""os"":""" & OSName & """" & vbCRLF & _
 		"	,""iv"":""" & iv & """" & vbCRLF & _
-		"	,""lc"":""" & lc & """" & vbCRLF & _
-		"	,""lang"":""" & lang & """" & vbCRLF & _
 		"}"
 
 	lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
