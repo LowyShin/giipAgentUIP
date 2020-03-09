@@ -50,7 +50,15 @@ lwURLKVS = replace(lwURLKVS, "{{lssn}}", lsSn)
 Set lwFso = CreateObject("Scripting.FileSystemObject")
 if lwFso.FileExists(strPathParent & "\giipAgent.cfg") then
 
-	jGiipCnf = "{""sk"":""" & at & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """,""iv"":""" & iv & """}"
+	jGiipCnf = "{" & vbCRLF & _
+		"	""sk"":""" & at & """" & vbCRLF & _
+		"	,""lssn"":""" & lssn & """" & vbCRLF & _
+		"	,""hn"":""" & hostname & """" & vbCRLF & _
+		"	,""os"":""" & OSName & """" & vbCRLF & _
+		"	,""iv"":""" & iv & """" & vbCRLF & _
+		"	,""lc"":""" & lc & """" & vbCRLF & _
+		"	,""lang"":""" & lang & """" & vbCRLF & _
+		"}"
 
 	lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
 	lwDelTmp lwPath
