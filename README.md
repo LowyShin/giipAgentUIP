@@ -20,11 +20,11 @@ git clone https://github.com/LowyShin/giipAgentWin.git
 ### Directory Structure
 
 * /ProjectRoot/
+  * giipAgent.cfg
+    * Copy and set your secret key from giipAgentUIP/
+    * See below Startup section
   * giipAgentUIP/
     * This repository
-    * `git clone https://github.com/LowyShin/giipAgentUIP.git`
-  * giipAgentWin/
-    * giip Control Base Scripts for windows
     * `git clone https://github.com/LowyShin/giipAgentUIP.git`
 
 ## Startup
@@ -120,3 +120,9 @@ https://github.com/LowyShin/giip/wiki/Contact-Us
 
 * UiPath Personal Knowledgebase
   * https://github.com/LowyShin/lwrpa-uip-study-ja/wiki
+
+## Update History
+
+* 20200309 Lowy
+  * Integrate to giipAgentUIP. No more download giipAgentWin
+  * Add interval variables. You may change execute interval at giipAgent.cfg

@@ -13,7 +13,12 @@ dim strScriptPath
 strScriptPath = objfs.GetParentFolderName(WScript.ScriptFullName)
 strPathParent = mid(strScriptPath, 1, instrRev(strScriptPath, "\"))
 
-include(objFs.BuildPath(strPathParent, "giipAgent.cfg"))
+Set lwFso = CreateObject("Scripting.FileSystemObject")
+if lwFso.FileExists(strPathParent & "\giipAgent.cfg") then
+	include(objFs.BuildPath(strPathParent, "giipAgent.cfg"))
+else
+	msgbox "Can not read giipAgent.cfg, check the file exists. If don't have, you need copy giipAgent.cfg to parent directory." & vbCRLF & " See https://github.com/LowyShin/giipAgentUIP"
+end if
 
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
@@ -43,11 +48,14 @@ lwURLKVS = replace(lwURLKVS, "{{sk}}", at)
 lwURLKVS = replace(lwURLKVS, "{{lssn}}", lsSn)
 
 Set lwFso = CreateObject("Scripting.FileSystemObject")
+if lwFso.FileExists(strPathParent & "\giipAgent.cfg") then
 
-jGiipCnf = "{""sk"":""" & at & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """}"
+	jGiipCnf = "{""sk"":""" & at & """,""lssn"":""" & lssn & """,""hn"":""" & hostname & """,""os"":""" & OSName & """,""iv"":""" & iv & """}"
 
-lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
-lwDelTmp lwPath
+	lwFileUpdate lwPathParent, fjGiipCnf, jGiipCnf
+	lwDelTmp lwPath
+else
+end if
 
 Sub lwLogFileWrite(sPath, sFileName, sContent)
       Set lwFso = CreateObject("Scripting.FileSystemObject")
