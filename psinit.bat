@@ -1,1 +1,1 @@
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force
+Powershell Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force
