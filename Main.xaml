@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1403,4342</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1401,4334</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -60,7 +60,7 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1383,4282" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1381,4274" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sHttpRst" />
       <Variable x:TypeArguments="njl:JObject" Name="joHttpRst" />
@@ -83,7 +83,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="If you want execute custom xaml file, &#xA;Set JSON data to giip script repository.&#xA;&#xA;See https://github.com/LowyShin/giipAgentUIP" DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1341,1311" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="If you want execute custom xaml file, &#xA;Set JSON data to giip script repository.&#xA;&#xA;See https://github.com/LowyShin/giipAgentUIP" DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1339,1311" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,7 +120,7 @@
                 <OutArgument x:TypeArguments="x:String">[lwURLAPI]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">["https://giipaspstg02.azurewebsites.net/api/cqe/cqequeueget04.asp?sk=" + joGiipCnf("sk").ToString + "&amp;lssn=" + joGiipCnf("lssn").ToString + "&amp;hn=" + sHostName + "&amp;os=" + sOSVer + "&amp;df=os&amp;sv=1.72"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["https://giipasp.azurewebsites.net/api/cqe/cqequeueget04.asp?sk=" + joGiipCnf("sk").ToString + "&amp;lssn=" + joGiipCnf("lssn").ToString + "&amp;hn=" + sHostName + "&amp;os=" + sOSVer + "&amp;df=os&amp;sv=1.72"]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -145,7 +145,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <If Condition="[len(sGiipCnf) &gt; 0]" sap:VirtualizedContainerService.HintSize="1341,833" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[len(sGiipCnf) &gt; 0]" sap:VirtualizedContainerService.HintSize="1339,833" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="526,685" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -201,7 +201,7 @@
         </Sequence>
       </If.Then>
     </If>
-    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1341,1434" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1339,1434" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
         <If Condition="[left( LTrim(sHttpRst), 1) = &quot;[&quot; or left( LTrim(sHttpRst), 1) = &quot;{&quot;]" sap:VirtualizedContainerService.HintSize="960,1286" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
@@ -317,7 +317,7 @@
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] pass ...http status :&quot; + nHttpCode.ToString + &quot;, size : &quot; + Len(sHttpRst).ToString]" />
       </If.Else>
     </If>
-    <Assign sap2010:Annotation.AnnotationText="if you put to server the text, use sCustVal" sap:VirtualizedContainerService.HintSize="1341,91" sap2010:WorkflowViewState.IdRef="Assign_9">
+    <Assign sap2010:Annotation.AnnotationText="if you put to server the text, use sCustVal" sap:VirtualizedContainerService.HintSize="1339,91" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[sRstExec]</OutArgument>
       </Assign.To>
@@ -330,7 +330,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1340.66666666667,62" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign sap:VirtualizedContainerService.HintSize="1339,60" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[lwURLKVS]</OutArgument>
       </Assign.To>
@@ -338,7 +338,7 @@
         <InArgument x:TypeArguments="x:String">[lwURLKVS + sRstExec]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1340.66666666667,62" sap2010:WorkflowViewState.IdRef="Assign_12">
+    <Assign sap:VirtualizedContainerService.HintSize="1339,60" sap2010:WorkflowViewState.IdRef="Assign_12">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[rp_exectype]</OutArgument>
       </Assign.To>
@@ -346,7 +346,7 @@
         <InArgument x:TypeArguments="x:String">[sFileExt]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[lwURLKVS]" sap:VirtualizedContainerService.HintSize="1340.66666666667,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[sHttpRst]" StatusCode="[nHttpCode]" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[lwURLKVS]" sap:VirtualizedContainerService.HintSize="1339,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[sHttpRst]" StatusCode="[nHttpCode]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -363,6 +363,6 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1340.66666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] KVS Update ... RstCode : &quot; + nHttpCode.ToString + &quot;, RstMsg : &quot; + sHttpRst]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1339,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] KVS Update ... RstCode : &quot; + nHttpCode.ToString + &quot;, RstMsg : &quot; + sHttpRst]" />
   </Sequence>
 </Activity>
