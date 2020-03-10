@@ -61,13 +61,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="716,636" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="716,670" sap2010:WorkflowViewState.IdRef="StateMachine_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
           <x:Double x:Key="StateContainerWidth">682</x:Double>
-          <x:Double x:Key="StateContainerHeight">600</x:Double>
+          <x:Double x:Key="StateContainerHeight">634</x:Double>
           <av:PointCollection x:Key="ConnectorLocation">273,77.5 273,107.5 232.45,107.5 232.45,127.166666666667</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -112,7 +112,7 @@
                         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,314" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -153,28 +153,15 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Transition.To>
-                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="If works be run, execute next job not sleep" DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="224,104" sap2010:WorkflowViewState.IdRef="State_2">
+                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="If works be run, execute next job not sleep&#xD;&#xA;&#xD;&#xA;20200310 Lowy, put sleep code to main.xaml for using iv variable." DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="224,149" sap2010:WorkflowViewState.IdRef="State_2">
                         <State.Entry>
-                          <Sequence sap:VirtualizedContainerService.HintSize="563,585" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[sExecType &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="521,393" sap2010:WorkflowViewState.IdRef="If_1">
-                              <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] All Jobs done, sleep... &quot;]" />
-                                  <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                            <Assign sap:VirtualizedContainerService.HintSize="521,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[op]</OutArgument>
                               </Assign.To>
@@ -187,7 +174,7 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">413,459.833333333333</av:Point>
-                            <av:Size x:Key="ShapeSize">224,104</av:Size>
+                            <av:Size x:Key="ShapeSize">224,149</av:Size>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             <x:Double x:Key="StateContainerWidth">190.5</x:Double>
@@ -198,7 +185,7 @@
                           <Transition DisplayName="Next" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:PointCollection x:Key="ConnectorLocation">446.6,563.833333333333 446.6,593.833333333333 103,593.833333333333 103,180.266666666667 133,180.266666666667</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">446.6,608.833333333333 446.6,630.266666666667 103,630.266666666667 103,180.266666666667 133,180.266666666667</av:PointCollection>
                                 <x:Int32 x:Key="SrcConnectionPointIndex">11</x:Int32>
                                 <x:Int32 x:Key="DestConnectionPointIndex">33</x:Int32>
                               </scg:Dictionary>
@@ -213,7 +200,7 @@
                           <Transition DisplayName="Exit" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:PointCollection x:Key="ConnectorLocation">637,511.833333333333 667,511.833333333333 667,37.45 541,37.45</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">637,534.333333333333 667,534.333333333333 667,37.45 541,37.45</av:PointCollection>
                                 <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
                                 <x:Int32 x:Key="DestConnectionPointIndex">32</x:Int32>
                               </scg:Dictionary>
