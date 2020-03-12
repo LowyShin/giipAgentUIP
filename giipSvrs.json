@@ -1,0 +1,5 @@
+{
+    "Server01" : "giipaspi02.azurewebsites.net",
+    "Server02" : "giipasp.azurewebsites.net",
+    "Server03" : "giipaspstg02.azurewebsites.net"
+}
