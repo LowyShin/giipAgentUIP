@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>859,2540</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>859,2866</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>giipConf_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -57,7 +57,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="giipConf" sap:VirtualizedContainerService.HintSize="839,2480" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="giipConf" sap:VirtualizedContainerService.HintSize="839,2806" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="gPathRoot" />
       <Variable x:TypeArguments="x:String" Name="gPathWork" />
@@ -70,6 +70,7 @@
       <Variable x:TypeArguments="x:String" Name="lwURLAPI" />
       <Variable x:TypeArguments="njl:JObject" Name="joGiipCnf" />
       <Variable x:TypeArguments="x:String" Name="sGiipCnf" />
+      <Variable x:TypeArguments="x:Int32" Name="nCntSvr" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,25 +127,49 @@
       </If.Else>
     </If>
     <ui:PathExists DisplayName="Config File Check - Path Exists" Exists="[isCfg]" sap:VirtualizedContainerService.HintSize="797,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[gPathWork + &quot;\giipSvrs.json&quot;]" PathType="File" />
-    <If Condition="[isCfg]" sap:VirtualizedContainerService.HintSize="797,1172" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[isCfg]" sap:VirtualizedContainerService.HintSize="797,1498" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,1024" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="382,1350" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadTextFile Content="[sGiipSvrs]" DisplayName="Read Text File" FileName="[gPathWork + &quot;\giipSvrs.json&quot;]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
-          <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[joGiipSvrs]" JsonString="[sGiipSvrs]" />
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <ui:ReadTextFile Content="[sGiipSvrs]" DisplayName="Read Text File" FileName="[gPathWork + &quot;\giipSvrs.json&quot;]" sap:VirtualizedContainerService.HintSize="340,132" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+          <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[joGiipSvrs]" JsonString="[sGiipSvrs]" />
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="340,286" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[joGiipSvrs]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[nCntSvr]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[nCntSvr + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+          </ui:ForEach>
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_6">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[nRnd]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Int32">[new Random().Next(1, 3)]</InArgument>
+              <InArgument x:TypeArguments="x:Int32">[new Random().Next(1, nCntSvr)]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_7">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[sRndSvr]</OutArgument>
             </Assign.To>
@@ -152,7 +177,7 @@
               <InArgument x:TypeArguments="x:String">[joGiipSvrs("Server" + right("0" + nRnd.ToString,2) ).ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_8">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[lwURLKVSGA]</OutArgument>
             </Assign.To>
@@ -160,7 +185,7 @@
               <InArgument x:TypeArguments="x:String">["https://" + sRndSvr + "/api/kvs/kvsput.asp?sk=" + joGiipCnf("sk").ToString + "&amp;type=lssn&amp;key=" + joGiipCnf("lssn").ToString + "&amp;factor=giipAgent&amp;value="]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_9">
             <Assign.To>
               <OutArgument x:TypeArguments="njl:JToken">[joGiipCnf("lwURLKVSGA")]</OutArgument>
             </Assign.To>
@@ -168,7 +193,7 @@
               <InArgument x:TypeArguments="njl:JToken">[lwURLKVSGA]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[lwURLAPI]</OutArgument>
             </Assign.To>
@@ -176,7 +201,7 @@
               <InArgument x:TypeArguments="x:String">["https://" + sRndSvr + "/api/cqe/cqequeueget04.asp?sk=" + joGiipCnf("sk").ToString + "&amp;lssn=" + joGiipCnf("lssn").ToString + "&amp;hn=" + joGiipCnf("hn").ToString + "&amp;os=" + joGiipCnf("os").ToString + "&amp;df=os&amp;sv=1.72"]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_14">
             <Assign.To>
               <OutArgument x:TypeArguments="njl:JToken">[joGiipCnf("lwURLAPI")]</OutArgument>
             </Assign.To>
@@ -184,7 +209,7 @@
               <InArgument x:TypeArguments="njl:JToken">[lwURLAPI]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+          <Assign sap:VirtualizedContainerService.HintSize="340,60" sap2010:WorkflowViewState.IdRef="Assign_10">
             <Assign.To>
               <OutArgument x:TypeArguments="njl:JObject">[rp_giipConf]</OutArgument>
             </Assign.To>

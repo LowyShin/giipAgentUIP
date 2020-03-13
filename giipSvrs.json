@@ -1,5 +1,12 @@
 {
     "Server01" : "giipaspi02.azurewebsites.net",
-    "Server02" : "giipasp.azurewebsites.net",
-    "Server03" : "giipaspstg02.azurewebsites.net"
+    "Server02" : "giipaspi03.azurewebsites.net",
+    "Server03" : "giipaspstg02.azurewebsites.net",
+    "Server04" : "giipaspi02.azurewebsites.net",
+    "Server05" : "giipaspi03.azurewebsites.net",
+    "Server06" : "giipaspi03.azurewebsites.net",
+    "Server07" : "giipaspi02.azurewebsites.net",
+    "Server08" : "giipaspstg02.azurewebsites.net",
+    "Server09" : "giipaspi03.azurewebsites.net",
+    "Server10" : "giipaspi02.azurewebsites.net"
 }
