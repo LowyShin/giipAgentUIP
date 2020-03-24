@@ -92,7 +92,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Transition.To>
-              <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Looping every 1min. like agent" DisplayName="Main Code" sap:VirtualizedContainerService.HintSize="134,103" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Looping every 1min. like agent" DisplayName="Main Code" sap:VirtualizedContainerService.HintSize="526,1194" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="480,803" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
@@ -126,7 +126,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[exception.Message]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] Exception : &quot; + exception.Message]" />
                               <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
                             </Sequence>
                           </ActivityAction>
@@ -155,7 +155,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Transition.To>
-                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="If works be run, execute next job not sleep&#xD;&#xA;&#xD;&#xA;20200310 Lowy, put sleep code to main.xaml for using iv variable." DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="350,611" sap2010:WorkflowViewState.IdRef="State_2">
+                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="If works be run, execute next job not sleep&#xD;&#xA;&#xD;&#xA;20200310 Lowy, put sleep code to main.xaml for using iv variable." DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="224,149" sap2010:WorkflowViewState.IdRef="State_2">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <sap:WorkflowViewStateService.ViewState>
@@ -184,7 +184,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <State.Transitions>
-                          <Transition DisplayName="Next" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_4">
+                          <Transition DisplayName="Next" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:PointCollection x:Key="ConnectorLocation">446.6,608.833333333333 446.6,630.266666666667 103,630.266666666667 103,180.266666666667 133,180.266666666667</av:PointCollection>
