@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>859,2866</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1172,2871</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>giipConf_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -86,7 +86,7 @@
         <InArgument x:TypeArguments="x:String">[mid(gPathWork, 1, instrRev(gPathWork, "\"))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathWork + &quot;\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="797,107" sap2010:WorkflowViewState.IdRef="InvokeVBScript_1" WaitForOutput="True">
+    <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathRoot + &quot;\giipAgentUIP\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="797,107" sap2010:WorkflowViewState.IdRef="InvokeVBScript_1" WaitForOutput="True">
       <ui:InvokeVBScript.Arguments>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:InvokeVBScript.Arguments>
