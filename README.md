@@ -10,13 +10,6 @@ If you using giipAgentLinux, you can handling linux also!
 
 This is giipAgent made by UiPath xaml file.
 
-It needs to make a acount to giip service and git clone giipAgentWin as below
-
-
-```sh
-git clone https://github.com/LowyShin/giipAgentWin.git
-```
-
 ### Directory Structure
 
 * /ProjectRoot/
@@ -26,17 +19,55 @@ git clone https://github.com/LowyShin/giipAgentWin.git
   * giipAgentUIP/
     * This repository
     * `git clone https://github.com/LowyShin/giipAgentUIP.git`
+  * giipAgentWin/
+    * giipAgent for windows
+    * It supported ahk(Auto hot key), wsf(WScript)
+    * `git clone https://github.com/LowyShin/giipAgentUIP.git`
 
-## Startup
+## Related application
+
+If you already installed, then skip this phase.
 
 * Install git for windows
   * https://gitforwindows.org/
   * It need to sync repository on working giipAgentUIP
+* Install UiPath
+  * https://uipath.com
+
+## Installation and configuration giipAgentUIP
+
 * Clone giipAgent for Windows
+  * `git clone https://github.com/LowyShin/giipAgentWin.git`
 * Clone this repository. It need to same level of directory with giipAgent
+  * `git clone https://github.com/LowyShin/giipAgentUIP.git`
+* Copy giipAgent.cfg to parent directory
+  * `copy giipAgent.cfg ..\`
+  * Change your information
+    * sk : your Secret key. you may see [Service management](https://giipasp.azurewebsites.net/view/SMAHTML/ServiceList.asp) or [Logical Server Detail Page](https://giipasp.azurewebsites.net/view/SMAHTML/LSvrList.asp).
+    * lssn : Your machine's lssn for giip logical server management. If you are not add logical server yet, you may keep "0". It will be generated a Logical Server on your service automatically.
+
+Well, Done! Run giipAgentUIP on UiPath Studio!
+
+You may run background giipAgentUIP. Search google, because it is not offical information of UiPath.
+
+## Control giipAgentUIP
+
 * Browse to giip web site
   * https://giipasp.azurewebsites.net/
-* Make account and login.
+* Login giip.
+  * If you have not account, create it. 
+* Add a new script on [giip Automation](https://giipasp.azurewebsites.net/view/SMAHTML/ScrRepo.asp)
+* Click to detail of your script, set a script to machine you have. 
+  * if you don't know how to add, see official [giip automation manual](https://github.com/LowyShin/giip/wiki/Automation)
+
+It's done! You are just waiting!
+
+note: You may run any time click `Run icon`
+
+## For a new giip user
+
+If you are first time on giip, you need register environment.
+
 * Create a Customer
   * Left Menu > Environment > Customers
   * Click [Add Customer](https://giipasp.azurewebsites.net/view/SMAHTML/CustomerAdd.asp) Button 
