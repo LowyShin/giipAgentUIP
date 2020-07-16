@@ -2429,9 +2429,9 @@
     "restore": {
       "projectUniqueName": "giipAgentUIP",
       "projectName": "giipAgentUIP",
-      "projectPath": "D:\\lwwork\\Projects\\giipAgentUIP\\.local",
+      "projectPath": "D:\\lwWork\\Projects\\giipAgentUIP\\.local",
       "packagesPath": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\",
-      "outputPath": "D:\\lwwork\\Projects\\giipAgentUIP\\.local"
+      "outputPath": "D:\\lwWork\\Projects\\giipAgentUIP\\.local"
     },
     "frameworks": {
       "net461": {
