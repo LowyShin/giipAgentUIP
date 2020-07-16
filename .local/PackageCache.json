@@ -599,5 +599,430 @@
         }
       ]
     }
-  }
+  },
+  "AllPackages": [
+    {
+      "Package": {
+        "Id": "AvalonEdit",
+        "Version": "5.0.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\avalonedit\\5.0.3\\lib\\Net40\\ICSharpCode.AvalonEdit.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\avalonedit\\5.0.3"
+    },
+    {
+      "Package": {
+        "Id": "BouncyCastle",
+        "Version": "1.8.5"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\bouncycastle\\1.8.5\\lib\\BouncyCastle.Crypto.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\bouncycastle\\1.8.5"
+    },
+    {
+      "Package": {
+        "Id": "ClosedXML",
+        "Version": "0.87.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\closedxml\\0.87.1\\lib\\net40\\ClosedXML.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\closedxml\\0.87.1"
+    },
+    {
+      "Package": {
+        "Id": "CsvHelper",
+        "Version": "2.13.5"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\csvhelper\\2.13.5\\lib\\net40-client\\CsvHelper.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\csvhelper\\2.13.5"
+    },
+    {
+      "Package": {
+        "Id": "DocumentFormat.OpenXml",
+        "Version": "2.5.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\documentformat.openxml\\2.5.0"
+    },
+    {
+      "Package": {
+        "Id": "Extended.Wpf.Toolkit",
+        "Version": "2.8.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.DataGrid.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.Toolkit.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis",
+        "Version": "1.40.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis\\1.40.2\\lib\\net45\\Google.Apis.PlatformServices.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis\\1.40.2\\lib\\net45\\Google.Apis.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis\\1.40.2"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Auth",
+        "Version": "1.40.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.auth\\1.40.2\\lib\\net45\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.auth\\1.40.2\\lib\\net45\\Google.Apis.Auth.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.auth\\1.40.2"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Calendar.v3",
+        "Version": "1.40.2.1611"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.calendar.v3\\1.40.2.1611\\lib\\net45\\Google.Apis.Calendar.v3.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.calendar.v3\\1.40.2.1611"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Core",
+        "Version": "1.40.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.core\\1.40.2\\lib\\net45\\Google.Apis.Core.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.core\\1.40.2"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Docs.v1",
+        "Version": "1.40.2.1615"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.docs.v1\\1.40.2.1615\\lib\\net45\\Google.Apis.Docs.v1.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.docs.v1\\1.40.2.1615"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Drive.v3",
+        "Version": "1.40.2.1610"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.drive.v3\\1.40.2.1610\\lib\\net45\\Google.Apis.Drive.v3.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.drive.v3\\1.40.2.1610"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Gmail.v1",
+        "Version": "1.40.2.1613"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.gmail.v1\\1.40.2.1613\\lib\\net45\\Google.Apis.Gmail.v1.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.gmail.v1\\1.40.2.1613"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Sheets.v4",
+        "Version": "1.40.2.1614"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.sheets.v4\\1.40.2.1614\\lib\\net45\\Google.Apis.Sheets.v4.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\google.apis.sheets.v4\\1.40.2.1614"
+    },
+    {
+      "Package": {
+        "Id": "Humanizer.Core",
+        "Version": "2.4.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\humanizer.core\\2.4.2\\lib\\netstandard2.0\\Humanizer.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\humanizer.core\\2.4.2"
+    },
+    {
+      "Package": {
+        "Id": "interop.domino.dll",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\interop.domino.dll\\1.0.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.AspNet.SignalR.Client",
+        "Version": "2.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\lib\\net45\\Microsoft.AspNet.SignalR.Client.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Exchange.WebServices",
+        "Version": "2.2.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Rest.ClientRuntime",
+        "Version": "2.3.20"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.20\\lib\\net461\\Microsoft.Rest.ClientRuntime.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.20"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.VisualStudio.OLE.Interop",
+        "Version": "7.10.6071"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\lib\\Microsoft.VisualStudio.OLE.Interop.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071"
+    },
+    {
+      "Package": {
+        "Id": "MimeKit",
+        "Version": "2.2.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\mimekit\\2.2.0\\lib\\net45\\MimeKit.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\mimekit\\2.2.0"
+    },
+    {
+      "Package": {
+        "Id": "Newtonsoft.Json",
+        "Version": "11.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\newtonsoft.json\\11.0.2\\lib\\net45\\Newtonsoft.Json.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\newtonsoft.json\\11.0.2"
+    },
+    {
+      "Package": {
+        "Id": "NodaTime",
+        "Version": "2.4.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\nodatime\\2.4.6\\lib\\net45\\NodaTime.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\nodatime\\2.4.6"
+    },
+    {
+      "Package": {
+        "Id": "NPOI",
+        "Version": "2.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\npoi\\2.4.1"
+    },
+    {
+      "Package": {
+        "Id": "RestSharp",
+        "Version": "106.3.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\restsharp\\106.3.1\\lib\\net452\\RestSharp.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\restsharp\\106.3.1"
+    },
+    {
+      "Package": {
+        "Id": "SharpZipLib",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\sharpziplib\\1.0.0\\lib\\net45\\ICSharpCode.SharpZipLib.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\sharpziplib\\1.0.0"
+    },
+    {
+      "Package": {
+        "Id": "System.ValueTuple",
+        "Version": "4.5.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\system.valuetuple\\4.5.0\\lib\\net461\\System.ValueTuple.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\system.valuetuple\\4.5.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath",
+        "Version": "19.10.7275.19994"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath\\19.10.7275.19994\\lib\\UiPath.Interop.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath\\19.10.7275.19994"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.2.6863.32528"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.database.activities\\1.2.6863.32528\\lib\\net40-Client\\Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.database.activities\\1.2.6863.32528\\lib\\net40-Client\\UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.database.activities\\1.2.6863.32528\\lib\\net40-Client\\UiPath.Database.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.database.activities\\1.2.6863.32528\\lib\\net40-Client\\UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.database.activities\\1.2.6863.32528"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Excel.Activities",
+        "Version": "2.7.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.excel.activities\\2.7.2\\lib\\net461\\UiPath.Excel.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.excel.activities\\2.7.2\\lib\\net461\\UiPath.Excel.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.excel.activities\\2.7.2\\lib\\net461\\UiPath.Excel.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.excel.activities\\2.7.2"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.GSuite.Activities",
+        "Version": "1.3.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.gsuite.activities\\1.3.1\\lib\\net461\\UiPath.GSuite.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.gsuite.activities\\1.3.1\\lib\\net461\\UiPath.GSuite.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.gsuite.activities\\1.3.1\\lib\\net461\\UiPath.GSuite.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.gsuite.activities\\1.3.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.7.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\lib\\net461\\MailKit.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\lib\\net461\\MimeKit.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\lib\\net461\\UiPath.Mail.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\lib\\net461\\UiPath.Mail.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.mail.activities\\1.7.2"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.OCR.Contracts",
+        "Version": "2.2.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.ocr.contracts\\2.2.1\\lib\\net45\\UiPath.OCR.Contracts.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.ocr.contracts\\2.2.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.System.Activities",
+        "Version": "19.10.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\CustomInputForm.exe",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\UiPath.OrchestratorClient.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\UiPath.System.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1\\lib\\net461\\UiPath.System.Activities.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.system.activities\\19.10.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.UIAutomation.Activities",
+        "Version": "19.11.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.CV.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.CV.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0\\lib\\net461\\UiPath.Wizards.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Vision",
+        "Version": "2.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.vision\\2.0.0\\lib\\net452\\UiPath.Vision.Core.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.vision\\2.0.0\\lib\\net452\\UiPath.Vision.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.vision\\2.0.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.WebAPI.Activities",
+        "Version": "1.4.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.webapi.activities\\1.4.4\\lib\\net452\\UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.webapi.activities\\1.4.4\\lib\\net452\\UiPath.Web.Activities.dll",
+        "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.webapi.activities\\1.4.4\\lib\\net452\\UiPath.Web.dll"
+      ],
+      "Path": "C:\\Users\\shin_hyunchul\\.nuget\\packages\\uipath.webapi.activities\\1.4.4"
+    }
+  ]
 }

@@ -7,15 +7,12 @@
 scrver = "1.00"
 ' User Variables 
 
-dim objfs:set objfs = createobject("scripting.filesystemobject"):sub include(p):executeglobal objfs.OpenTextfile(p).readall:end sub
-dim strScriptPath
-
-strScriptPath = objfs.GetParentFolderName(WScript.ScriptFullName)
+Set lwFso = CreateObject("Scripting.FileSystemObject")
+strScriptPath = lwFso.GetParentFolderName(WScript.ScriptFullName)
 strPathParent = mid(strScriptPath, 1, instrRev(strScriptPath, "\"))
 
-Set lwFso = CreateObject("Scripting.FileSystemObject")
 if lwFso.FileExists(strPathParent & "\giipAgent.cfg") then
-	include(objFs.BuildPath(strPathParent, "giipAgent.cfg"))
+	executeglobal lwFso.OpenTextfile(strPathParent & "\giipAgent.cfg").ReadAll
 else
 	msgbox "Can not read giipAgent.cfg, check the file exists. If don't have, you need copy giipAgent.cfg to parent directory." & vbCRLF & " See https://github.com/LowyShin/giipAgentUIP"
 end if
