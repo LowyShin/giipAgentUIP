@@ -22,7 +22,7 @@ This is giipAgent made by UiPath xaml file.
   * giipAgentWin/
     * giipAgent for windows
     * It supported ahk(Auto hot key), wsf(WScript)
-    * `git clone https://github.com/LowyShin/giipAgentUIP.git`
+    * `git clone https://github.com/LowyShin/giipAgentWin.git`
 
 ## Related application
 
@@ -41,7 +41,7 @@ If you already installed, then skip this phase.
 * Clone this repository. It need to same level of directory with giipAgent
   * `git clone https://github.com/LowyShin/giipAgentUIP.git`
 * Copy giipAgent.cfg to parent directory
-  * `copy giipAgent.cfg ..\`
+  * `copy giipAgentUIP\giipAgent.cfg ..\`
   * Change your information
     * sk : your Secret key. you may see [Service management](https://giipasp.azurewebsites.net/view/SMAHTML/ServiceList.asp) or [Logical Server Detail Page](https://giipasp.azurewebsites.net/view/SMAHTML/LSvrList.asp).
     * lssn : Your machine's lssn for giip logical server management. If you are not add logical server yet, you may keep "0". It will be generated a Logical Server on your service automatically.
