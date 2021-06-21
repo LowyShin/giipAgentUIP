@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1371,4192</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1371,4191</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -60,9 +60,10 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1381,4087" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1381,4126" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sHttpRst" />
       <Variable x:TypeArguments="njl:JObject" Name="joHttpRst" />
@@ -129,9 +130,9 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <If Condition="[len(lwURLAPI) &gt; 0]" sap:VirtualizedContainerService.HintSize="1339,833" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[len(lwURLAPI) &gt; 0]" sap:VirtualizedContainerService.HintSize="1339,872" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="725,685" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="725,695" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -155,7 +156,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.UrlSegments>
           </ui:HttpClient>
-          <If Condition="[sHttpRst &lt;&gt; &quot;&quot; and left(sHttpRst, 17) &lt;&gt; &quot;An error occurred&quot; and instr( sHttpRst, &quot;Web App - Unavailable&quot;) = 0]" sap:VirtualizedContainerService.HintSize="683,400" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[sHttpRst &lt;&gt; &quot;&quot; and left(sHttpRst, 17) &lt;&gt; &quot;An error occurred&quot; and instr( sHttpRst, &quot;Web App - Unavailable&quot;) = 0  and instr( sHttpRst, &quot;Service Unavailable&quot;) = 0]" sap:VirtualizedContainerService.HintSize="683,410" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
