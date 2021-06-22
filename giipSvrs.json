@@ -1,12 +1,12 @@
 {
-    "Server01" : "giipaspi02.azurewebsites.net",
-    "Server02" : "giipaspi03.azurewebsites.net",
-    "Server03" : "giipaspi04.azurewebsites.net",
-    "Server04" : "giipaspi02.azurewebsites.net",
-    "Server05" : "giipaspi04.azurewebsites.net",
-    "Server06" : "giipaspi03.azurewebsites.net",
-    "Server07" : "giipaspi02.azurewebsites.net",
-    "Server08" : "giipaspi04.azurewebsites.net",
-    "Server09" : "giipaspi03.azurewebsites.net",
-    "Server10" : "giipaspi02.azurewebsites.net"
+    "Server01" : "giipapi.azurefd.net",
+    "Server02" : "giipapi.azurefd.net",
+    "Server03" : "giipapi.azurefd.net",
+    "Server04" : "giipapi.azurefd.net",
+    "Server05" : "giipapi.azurefd.net",
+    "Server06" : "giipapi.azurefd.net",
+    "Server07" : "giipapi.azurefd.net",
+    "Server08" : "giipapi.azurefd.net",
+    "Server09" : "giipapi.azurefd.net",
+    "Server10" : "giipapi.azurefd.net"
 }
