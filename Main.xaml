@@ -156,7 +156,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.UrlSegments>
           </ui:HttpClient>
-          <If Condition="[nHttpCode = 200]" sap:VirtualizedContainerService.HintSize="684,420" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[nHttpCode = 200 and sHttpRst.Length &gt; 0]" sap:VirtualizedContainerService.HintSize="684,420" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
