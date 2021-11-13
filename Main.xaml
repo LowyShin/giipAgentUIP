@@ -156,7 +156,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.UrlSegments>
           </ui:HttpClient>
-          <If Condition="[not String.IsNullOrEmpty(sHttpRst) and sHttpRst &lt;&gt; &quot;&quot; and left(sHttpRst, 17) &lt;&gt; &quot;An error occurred&quot; and instr( sHttpRst, &quot;Web App - Unavailable&quot;) = 0  and instr( sHttpRst, &quot;Service unavailable&quot;) = 0]" sap:VirtualizedContainerService.HintSize="684,420" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[nHttpCode = 200]" sap:VirtualizedContainerService.HintSize="684,420" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
