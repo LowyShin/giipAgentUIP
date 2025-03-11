@@ -23,6 +23,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "ps1File&Sequence_9",
         "sHttpRst&Sequence_1",
         "joHttpRst&Sequence_1",
         "sFileExt&Sequence_1",
