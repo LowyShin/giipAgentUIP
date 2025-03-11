@@ -1,1 +1,0 @@
-wscript //B //Nologo giipTmpScript.wsf
