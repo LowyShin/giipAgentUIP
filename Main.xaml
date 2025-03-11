@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="rp_exectype" Type="OutArgument(x:String)" />
   </x:Members>
@@ -8,7 +8,7 @@
   <sap:VirtualizedContainerService.HintSize>1370.66666666667,4324.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="26">
+    <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -35,10 +35,14 @@
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Management.Automation</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -69,9 +73,23 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1380.66666666667,4160" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MainFlow" sap:VirtualizedContainerService.HintSize="1339,5299" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sHttpRst" />
       <Variable x:TypeArguments="njl:JObject" Name="joHttpRst" />
@@ -95,15 +113,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="If you want execute custom xaml file, &#xA;Set JSON data to giip script repository.&#xA;&#xA;See https://github.com/LowyShin/giipAgentUIP" DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1338.66666666667,810" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="If you want execute custom xaml file, &#xA;Set JSON data to giip script repository.&#xA;&#xA;See https://github.com/LowyShin/giipAgentUIP" DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1339,960" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetEnvironmentVariable DisplayName="CurrentDirectory - Get Environment Variable" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="CurrentDirectory" VariableValue="[gPathWork]" />
-      <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <ui:GetEnvironmentVariable DisplayName="CurrentDirectory - Get Environment Variable" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="CurrentDirectory" VariableValue="[gPathWork]" />
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[gPathRoot]</OutArgument>
         </Assign.To>
@@ -111,17 +129,17 @@
           <InArgument x:TypeArguments="x:String">[mid(gPathWork, 1, instrRev(gPathWork, "\"))]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathRoot + &quot;\giipAgentUIP\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="334,108" sap2010:WorkflowViewState.IdRef="InvokeVBScript_1" WaitForOutput="True">
+      <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathRoot + &quot;\giipAgentUIP\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="434,178" sap2010:WorkflowViewState.IdRef="InvokeVBScript_1" WaitForOutput="True">
         <ui:InvokeVBScript.Arguments>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
         </ui:InvokeVBScript.Arguments>
       </ui:InvokeVBScript>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="[gPathRoot + &quot;\giipAgentUIP\giipConf.xaml&quot;]">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="[gPathRoot + &quot;\giipAgentUIP\giipConf.xaml&quot;]">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="njl:JObject" x:Key="rp_giipConf">[joGiipCnf]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[lwURLAPI]</OutArgument>
         </Assign.To>
@@ -129,7 +147,7 @@
           <InArgument x:TypeArguments="x:String">[joGiipCnf("lwURLAPI").ToString]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_8">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:GenericValue">[lwURLKVSGA]</OutArgument>
         </Assign.To>
@@ -138,9 +156,9 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <If Condition="[len(lwURLAPI) &gt; 0]" sap:VirtualizedContainerService.HintSize="1338.66666666667,893.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[len(lwURLAPI) &gt; 0]" sap:VirtualizedContainerService.HintSize="1339,867" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="726,708.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="726,708.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,12 +214,15 @@
           </If>
         </Sequence>
       </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap2010:WorkflowViewState.IdRef="Sequence_12" />
+      </If.Else>
     </If>
-    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1339,1328" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[nHttpCode = 200 and sHttpRst &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1339,2732" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
-        <If Condition="[left( LTrim(sHttpRst), 1) = &quot;[&quot; or left( LTrim(sHttpRst), 1) = &quot;{&quot;]" sap:VirtualizedContainerService.HintSize="960,1180" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[left( LTrim(sHttpRst), 1) = &quot;[&quot; or left( LTrim(sHttpRst), 1) = &quot;{&quot;]" sap:VirtualizedContainerService.HintSize="533,2459" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="376,775" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="531,818" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="sPathXaml" />
               </Sequence.Variables>
@@ -210,15 +231,15 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[joHttpRst]" JsonString="[sHttpRst]" />
-              <ui:WriteTextFile sap2010:Annotation.AnnotationText="Add delete tmpfile command after test!!!" DisplayName="Write Text File" FileName="giipTmpScript.json" sap:VirtualizedContainerService.HintSize="334,163" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[sHttpRst]">
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="497,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[joHttpRst]" JsonString="[sHttpRst]" />
+              <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Add delete tmpfile command after test!!!" DisplayName="Write Text File" FileName="giipTmpScript.json" sap:VirtualizedContainerService.HintSize="497,196" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[sHttpRst]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WriteTextFile>
-              <Assign sap2010:Annotation.AnnotationText="20200306 Lowy add field Execxaml" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign sap2010:Annotation.AnnotationText="20200306 Lowy add field Execxaml" sap:VirtualizedContainerService.HintSize="497,145" sap2010:WorkflowViewState.IdRef="Assign_11">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[sPathXaml]</OutArgument>
                 </Assign.To>
@@ -231,7 +252,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Execute custom xaml " DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,118" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[sPathXaml]">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Execute custom xaml " DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="497,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[sPathXaml]">
                 <ui:InvokeWorkflowFile.Arguments>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:InvokeWorkflowFile.Arguments>
@@ -245,7 +266,7 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence sap:VirtualizedContainerService.HintSize="539,1032" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="531,1535" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="giipCmd" />
               </Sequence.Variables>
@@ -254,10 +275,10 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;giipTmpScript.&quot; + sFileExt]" sap:VirtualizedContainerService.HintSize="497,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[sHttpRst]" />
-              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[sFileExt]" sap:VirtualizedContainerService.HintSize="497,160" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[&quot;giipTmpScript.&quot; + sFileExt]" sap:VirtualizedContainerService.HintSize="497,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[sHttpRst]" />
+              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[sFileExt]" sap:VirtualizedContainerService.HintSize="497,725" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                 <Switch.Default>
-                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign sap:VirtualizedContainerService.HintSize="468,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[giipCmd]</OutArgument>
                     </Assign.To>
@@ -266,7 +287,7 @@
                     </Assign.Value>
                   </Assign>
                 </Switch.Default>
-                <Assign x:Key="wsf" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign x:Key="wsf" sap:VirtualizedContainerService.HintSize="468,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[giipCmd]</OutArgument>
                   </Assign.To>
@@ -274,14 +295,14 @@
                     <InArgument x:TypeArguments="x:String">["wscript //B //Nologo giipTmpScript.wsf"]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Sequence x:Key="ps1" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence x:Key="ps1" DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,285" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="[&quot;powershell.exe -Command &quot;&quot;Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force&quot;]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" />
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;-ExecutionPolicy RemoteSigned -Command &quot;&quot;Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force&quot;&quot;&quot;]" DisplayName="Powershell Pemission change" FileName="powershell.exe" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[giipCmd]</OutArgument>
                     </Assign.To>
@@ -291,15 +312,15 @@
                   </Assign>
                 </Sequence>
               </Switch>
-              <ui:WriteTextFile sap2010:Annotation.AnnotationText="Add delete tmpfile command after test!!!" DisplayName="Write Text File" FileName="giipExec.bat" sap:VirtualizedContainerService.HintSize="497,163" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[giipCmd]">
+              <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Add delete tmpfile command after test!!!" DisplayName="Write Text File" FileName="giipExec.bat" sap:VirtualizedContainerService.HintSize="497,196" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[giipCmd]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WriteTextFile>
-              <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="/c start /min giipExec.bat ^&amp; exit" DisplayName="Start Process" FileName="cmd.exe" sap:VirtualizedContainerService.HintSize="497,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-              <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathWork + &quot;\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="497,107" sap2010:WorkflowViewState.IdRef="InvokeVBScript_2" WaitForOutput="True">
+              <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="/c start /min giipExec.bat ^&amp; exit" DisplayName="Start Process" FileName="cmd.exe" sap:VirtualizedContainerService.HintSize="497,120" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+              <ui:InvokeVBScript KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[gPathWork + &quot;\giipCnf2Json.vbs&quot;]" sap:VirtualizedContainerService.HintSize="497,178" sap2010:WorkflowViewState.IdRef="InvokeVBScript_2" WaitForOutput="True">
                 <ui:InvokeVBScript.Arguments>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                 </ui:InvokeVBScript.Arguments>

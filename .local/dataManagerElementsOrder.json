@@ -3,9 +3,9 @@
     {
       "Path": null,
       "SortBy": 0,
-      "VariablesSectionElementsOrder": null,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": null,
-      "ConstantsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
@@ -16,6 +16,35 @@
         "sExecType&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "sHttpRst&Sequence_1",
+        "joHttpRst&Sequence_1",
+        "sFileExt&Sequence_1",
+        "gPathWork&Sequence_1",
+        "gPathRoot&Sequence_1",
+        "lwURLAPI&Sequence_1",
+        "joGiipCnf&Sequence_1",
+        "sGiipCnf&Sequence_1",
+        "isCfg&Sequence_1",
+        "sHostName&Sequence_1",
+        "sOSVer&Sequence_1",
+        "nHttpCode&Sequence_1",
+        "lwURLKVS&Sequence_1",
+        "sRstExec&Sequence_1",
+        "sCustVal&Sequence_1",
+        "lwURLKVSGA&Sequence_1",
+        "sPathXaml&Sequence_7",
+        "giipCmd&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "rp_exectype"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
